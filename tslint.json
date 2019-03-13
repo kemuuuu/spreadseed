@@ -9,6 +9,7 @@
   },
   "rules": {
     "interface-name": false,
-    "member-access": false
+    "member-access": false,
+    "ordered-imports": false 
   }
 }

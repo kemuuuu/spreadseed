@@ -1,0 +1,11 @@
+.cell_input{
+  border: 0;
+  padding: 5px;
+  font-size: 0.8em;
+  font-family: Arial, sans-serif;
+  color: #ccc;
+  background: #fff;
+  border: solid 1px #ccc;
+  margin:0;
+  width: 100px;
+}

@@ -1,14 +1,5 @@
 import * as React from 'react'
-
-const styles = {
-  cell_box: {
-    // border: '1px solid black'
-  },
-  cell_input: {
-    // height: '10px',
-    // width: '30px'
-  }
-}
+import './cell.css'
 
 interface Props {
   row: number
@@ -30,6 +21,7 @@ export default class Cell extends React.Component<Props, State> {
     this.state = {
       value: ''
     }
+    this.handleInputChange = this.handleInputChange.bind(this)
   }
 
   handleInputChange(e: CellInputEvent) {
@@ -40,9 +32,9 @@ export default class Cell extends React.Component<Props, State> {
 
   render(): JSX.Element {
     return(
-      <div style={{gridRow: this.props.row, gridColumn: this.props.column}}>
+      <div className='cell_box' style={{gridRow: this.props.row, gridColumn: this.props.column}}>
         <input 
-          style={styles.cell_input}
+          className='cell_input'
           type="text" 
           name={this.props.row + "-" + this.props.column} 
           value={this.state.value} 
